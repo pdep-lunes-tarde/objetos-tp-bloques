@@ -18,5 +18,5 @@ Y que también nos sepa decir si dos objetos son iguales según un criterio.
 4- Agregar una caja de madera, que puede contener algo y que su peso se calcula como 0.2 kilos + el peso de lo que lleve adentro y su volumen se calcula como 1 metro cúbico.
 
 5-
-a) Hacer un test que chequee que algún objeto es menor según su peso que el mismo objeto dentro de la caja.
-b) Hacer un test chequeando que el peso de la caja vacía es de 0.2 kilos.
+- Hacer un test que chequee que algún objeto es menor según su peso que el mismo objeto dentro de la caja.
+- Hacer un test chequeando que el peso de la caja vacía es de 0.2 kilos.
