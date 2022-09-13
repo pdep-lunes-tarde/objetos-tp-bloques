@@ -12,7 +12,6 @@ Y que también nos sepa decir si dos objetos son iguales según un criterio.
 3- Hacer tests usando la balanza para los siguientes casos (si ya los habías hecho por hacer TDD genial, pueden pasar al 4 `:)`):
 - un kilo de plomo no es mayor a un kilo de plumas según su peso.
 - un kilo de plumas no es mayor a un kilo de plomo según su peso.
-- un kilo de plumas es igual a un kilo de plomo segun su peso.
 - un kilo de plumas es igual a un kilo de plomo según su peso.
 - un kilo de plumas es mayor a un kilo de plomo según su volumen.
 
