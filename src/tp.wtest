@@ -3,3 +3,35 @@ import tp.*
 test "Test de ejemplo" {
 		assert.equals(4, 2 + 2)
 }
+
+//Punto 3
+
+test "Un kilo de plomo no es mayor a un kilo de plumas según su peso."{
+	assert.that(!balanza.esMayor(kiloDePlomo,kiloDePluma,{objeto =>objeto.peso()}))
+}
+test "Un kilo de plumas no es mayor a un kilo de plomo según su peso."{
+	assert.that(!balanza.esMayor(kiloDePluma,kiloDePlomo,{objeto =>objeto.peso()}))
+
+}
+test "Un kilo de plumas es igual a un kilo de plomo según su peso."{
+	assert.that(balanza.esIgual(kiloDePluma,kiloDePlomo,{objeto =>objeto.peso()}))
+}
+test "Un kilo de plumas es mayor a un kilo de plomo según su volumen."{
+	assert.that(balanza.esMayor(kiloDePluma,kiloDePlomo,{objeto =>objeto.volumen()}))
+}
+// se podría agregar un objeto criterioPeso para no repetir logica
+
+//Punto 5
+
+test "Un objeto es menor según su peso que el mismo objeto dentro de la caja."{
+	cajaDeMadera.algo(kiloDePlomo)
+	assert.that(balanza.esMayor(cajaDeMadera,kiloDePlomo,{objeto =>objeto.peso()}))
+	//No se si convendría quiza agregar un metodo esMenor en vez de poner el esMayor y cambiar el orden
+}
+test "El peso de la caja vacía es de 0.2 kilos."{
+	cajaDeMadera.algo(null)
+	assert.that(cajaDeMadera.peso() == 0.2)
+}
+
+
+
