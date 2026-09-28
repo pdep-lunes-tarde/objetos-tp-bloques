@@ -2,15 +2,11 @@
 // Punto 1
 object balanza{
     method esMayor(unaCosa,otraCosa,criterio){
-        const unaCosaTransformada = criterio.apply(unaCosa)
-        const otraCosaTranformada = criterio.apply(otraCosa)
-        return  unaCosaTransformada > otraCosaTranformada
+        return  criterio.apply(unaCosa) > criterio.apply(otraCosa)
     }
 
     method esIgual(unaCosa,otraCosa,criterio){
-        const unaCosaTransformada = criterio.apply(unaCosa)
-        const otraCosaTranformada = criterio.apply(otraCosa)
-        return unaCosaTransformada == otraCosaTranformada
+        return criterio.apply(unaCosa) == criterio.apply(otraCosa)
     }
 }
 
@@ -33,13 +29,20 @@ object kiloDePluma{
 
 //Punto 4
 object cajaDeMadera{
-    var property algo = kiloDePlomo
+    var algo = kiloDePlomo
+
+    method cambiarAlgo(nuevaCosa){
+        algo = nuevaCosa
+    }
+    
     const pesoBase = 0.2
     method peso() {
-        if (algo == null){
-            return pesoBase
-        }
         return pesoBase + algo.peso()
     }
     method volumen() = 1 
+}
+
+object vacio{
+    method peso()=0
+    method volumen()=0
 }
